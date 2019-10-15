@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestProjectTableView/Launches/Upcoming/Details/Rocket/RocketTableViewCell.swift"
+            timestampString = "592838395.001848"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "RocketTableViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestProjectTableView.RocketTableViewCell.isActiveLbl.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "TestProjectTableView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/volodymyrsmulskyi/Desktop/untitled%20folder/TestProjectTableView%204/TestProjectTableView/Launches/Upcoming/Details/Rocket/RocketTableViewCell.swift"
+                  timestampString = "592417594.899071"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestProjectTableView.RocketTableViewCell.isActiveLbl.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "TestProjectTableView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/volodymyrsmulskyi/Desktop/untitled%20folder/TestProjectTableView%204/TestProjectTableView/Launches/Upcoming/Details/Rocket/RocketTableViewCell.swift"
+                  timestampString = "592417594.900689"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestProjectTableView.RocketTableViewCell.isActiveLbl.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "TestProjectTableView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/volodymyrsmulskyi/Desktop/untitled%20folder/TestProjectTableView%204/TestProjectTableView/Launches/Upcoming/Details/Rocket/RocketTableViewCell.swift"
+                  timestampString = "592417594.90215"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "69">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestProjectTableView.RocketTableViewCell.isActiveLbl.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "TestProjectTableView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/volodymyrsmulskyi/Desktop/untitled%20folder/TestProjectTableView%204/TestProjectTableView/Launches/Upcoming/Details/Rocket/RocketTableViewCell.swift"
+                  timestampString = "592417594.903522"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestProjectTableView.RocketTableViewCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; TestProjectTableView.RocketTableViewCell"
+                  moduleName = "TestProjectTableView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/volodymyrsmulskyi/Desktop/untitled%20folder/TestProjectTableView%204/TestProjectTableView/Launches/Upcoming/Details/Rocket/RocketTableViewCell.swift"
+                  timestampString = "592417594.9048899"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "633">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestProjectTableView.RocketTableViewCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;TestProjectTableView.RocketTableViewCell&gt;"
+                  moduleName = "TestProjectTableView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/volodymyrsmulskyi/Desktop/untitled%20folder/TestProjectTableView%204/TestProjectTableView/Launches/Upcoming/Details/Rocket/RocketTableViewCell.swift"
+                  timestampString = "592417594.906262"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "547">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestProjectTableView/Launches/Upcoming/Details/DetailsVC.swift"
+            timestampString = "592847324.603116"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

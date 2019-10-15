@@ -1,0 +1,6 @@
+framework module Pods_TestProjectTableView {
+  umbrella header "Pods-TestProjectTableView-umbrella.h"
+
+  export *
+  module * { export * }
+}

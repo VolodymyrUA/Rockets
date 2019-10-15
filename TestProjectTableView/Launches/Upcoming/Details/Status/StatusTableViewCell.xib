@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Status" rowHeight="108" id="pGY-e6-hDY" customClass="StatusTableViewCell" customModule="TestProjectTableView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="268" height="89"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pGY-e6-hDY" id="Y6g-kY-8AW">
+                <rect key="frame" x="0.0" y="0.0" width="268" height="88.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some date" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZD-Cv-kcP">
+                        <rect key="frame" x="16" y="5" width="247" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Watch" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIZ-XS-j5l">
+                        <rect key="frame" x="16" y="56" width="247" height="22.5"/>
+                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                        <color key="textColor" red="0.81568627450980391" green="0.0078431372549019607" blue="0.10588235294117647" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrition" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4i5-FR-wBL">
+                        <rect key="frame" x="16" y="30.5" width="247" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="EZD-Cv-kcP" secondAttribute="trailing" constant="5" id="13i-Ud-APQ"/>
+                    <constraint firstItem="EZD-Cv-kcP" firstAttribute="leading" secondItem="Y6g-kY-8AW" secondAttribute="leading" constant="16" id="4Hu-Td-m8L"/>
+                    <constraint firstItem="QIZ-XS-j5l" firstAttribute="leading" secondItem="Y6g-kY-8AW" secondAttribute="leading" constant="16" id="7da-ro-973"/>
+                    <constraint firstItem="4i5-FR-wBL" firstAttribute="top" secondItem="EZD-Cv-kcP" secondAttribute="bottom" constant="5" id="8Vm-Ou-eeC"/>
+                    <constraint firstAttribute="bottom" secondItem="QIZ-XS-j5l" secondAttribute="bottom" constant="10" id="Kgr-O4-EUR"/>
+                    <constraint firstAttribute="trailing" secondItem="4i5-FR-wBL" secondAttribute="trailing" constant="5" id="PiN-pY-mG5"/>
+                    <constraint firstAttribute="trailing" secondItem="QIZ-XS-j5l" secondAttribute="trailing" constant="5" id="XNf-WO-s77"/>
+                    <constraint firstItem="4i5-FR-wBL" firstAttribute="leading" secondItem="Y6g-kY-8AW" secondAttribute="leading" constant="16" id="ajb-oh-TNb"/>
+                    <constraint firstItem="QIZ-XS-j5l" firstAttribute="top" secondItem="4i5-FR-wBL" secondAttribute="bottom" constant="5" id="oaf-mu-Rzb"/>
+                    <constraint firstItem="EZD-Cv-kcP" firstAttribute="top" secondItem="Y6g-kY-8AW" secondAttribute="top" constant="5" id="ryu-O8-3ra"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="statusDateLabel" destination="EZD-Cv-kcP" id="pZU-Ds-tW8"/>
+                <outlet property="statusDescriptionLabel" destination="4i5-FR-wBL" id="AEO-lG-JT5"/>
+                <outlet property="statusWatchLabel" destination="QIZ-XS-j5l" id="LJK-oQ-4tU"/>
+            </connections>
+            <point key="canvasLocation" x="214.49275362318843" y="-120.20089285714285"/>
+        </tableViewCell>
+    </objects>
+</document>
