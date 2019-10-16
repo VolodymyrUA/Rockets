@@ -20,7 +20,6 @@ enum Item: CaseIterable {
 class DetailsVC: UIViewController {
     
     var launch: Launch?
-   
     
     @IBOutlet weak var detailsTableView: UITableView!
     
@@ -30,25 +29,30 @@ class DetailsVC: UIViewController {
         navigationItem.title = launch?.name
         
         detailsTableView.dataSource = self
+        detailsTableView.tableFooterView = UIView()
+        detailsTableView.rowHeight = UITableView.automaticDimension
+        detailsTableView.estimatedRowHeight = 60
+        registerCell()
+        detailsTableView.reloadData()
+    }
+    
+    func registerCell() {
         detailsTableView.register(UINib(nibName: "StatusTableViewCell", bundle:Bundle.main ), forCellReuseIdentifier:"Status")
         detailsTableView.register(UINib(nibName: "RocketTableViewCell", bundle:Bundle.main ), forCellReuseIdentifier:"Rocket")
         detailsTableView.register(UINib(nibName: "MissionDetailsTableViewCell", bundle:Bundle.main ), forCellReuseIdentifier:"MissionDetails")
         detailsTableView.register(UINib(nibName: "LocationTableViewCell", bundle:Bundle.main ), forCellReuseIdentifier:"Location")
         detailsTableView.register(UINib(nibName: "StatsTableViewCell", bundle:Bundle.main ), forCellReuseIdentifier:"Stats")
-        detailsTableView.tableFooterView = UIView()
-        detailsTableView.reloadData()
-        
     }
     
     private func constructCellForModel(cellModel: Launch, tableView:UITableView, indexPath: IndexPath) -> UITableViewCell {
         
         var cell = UITableViewCell()
-        //guard let launchData = cellModel else { return cell }
         
         let item = Item.allCases[indexPath.section]
         switch item {
         case .status:
             if let statusCell = tableView.dequeueReusableCell(withIdentifier: "Status") as? StatusTableViewCell {
+                statusCell.delegate = self
                 statusCell.configureWith(data: cellModel)
                 cell = statusCell
                 return cell
@@ -88,8 +92,6 @@ class DetailsVC: UIViewController {
     
 }
 
-
-
 extension DetailsVC: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -123,7 +125,9 @@ extension DetailsVC: UITableViewDelegate, UITableViewDataSource {
                 if let navigator = navigationController {
                     navigator.pushViewController(vcWebViki, animated: true)
                 }
+                
             default: break
+                
             }
         }
     }
@@ -146,35 +150,49 @@ extension DetailsVC: UITableViewDelegate, UITableViewDataSource {
         let label = UILabel(frame: CGRect(x: 10, y: 5, width: tableView.frame.size.width, height: 20))
         label.font = UIFont.boldSystemFont(ofSize: 20.0)
         label.textColor = UIColor.black
+        view.addSubview(label)
         
         let item = Item.allCases[section]
         
         switch item {
         case .status:
             label.text = "Status"
-            view.addSubview(label)
-            return view
+            
         case .rocket:
             label.text = "Rocket"
-            view.addSubview(label)
-            return view
+            
         case .missionDetails:
             label.text = "MissionDetails"
-            view.addSubview(label)
-            return view
+            
         case .location:
             label.text = "Location"
-            view.addSubview(label)
-            return view
+            
         case .stats:
             label.text = "Stats"
-            view.addSubview(label)
-            return view
         }
+        return view
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30.0
     }
     
+}
+
+extension DetailsVC: StatusTableViewCellDelegete {
+    
+    func didTapOnButton() {
+        if let vcWebViki = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WebVikiVC") as? WebVikiVC
+        {
+            let arrayOfURL = launch?.location?.pads?.first?.agencies?.first?.infoURLs
+            let youtubeURL = arrayOfURL?.filter {$0.contains("youtube")}
+            if let url = youtubeURL?.first  {
+                vcWebViki.url = url
+            }
+            
+            if let navigator = navigationController {
+                navigator.pushViewController(vcWebViki, animated: true)
+            }
+        }
+    }
 }

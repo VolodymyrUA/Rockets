@@ -9,6 +9,7 @@
 import Foundation
 import WebKit
 
+
 class WebVikiVC: UIViewController, WKUIDelegate {
     
     var webView: WKWebView!
@@ -25,12 +26,11 @@ class WebVikiVC: UIViewController, WKUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         guard  let wikiURL = url else { return }
-
+        
         let myURL = URL(string: wikiURL)
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -38,8 +38,10 @@ class WebVikiVC: UIViewController, WKUIDelegate {
         
        
     }
+    
     @objc func popToRoot() {
-        navigationController?.popToRootViewController(animated: true)
+        let previousVC = navigationController!.viewControllers.filter { $0 is DetailsVC }.first!
+        navigationController?.popToViewController(previousVC, animated: true)
     }
     
 }

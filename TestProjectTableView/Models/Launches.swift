@@ -23,20 +23,25 @@ struct Launch: Decodable {
     var rocket: Rocket?
     var missions: [Mission]?
     var lsp: Lsp?
-    
-    struct Location: Decodable {
-        var id: Int
-        var name: String?
-        var countryCode: String?
-        var pads: [Pads]?
-        
-        struct Pads: Decodable {
-            var id: Int
-            var mapURL: String?
-            var latitude: Float?
-            var longitude: Float?
-        }
-    }
+}
+
+struct Location: Decodable {
+    var id: Int
+    var name: String?
+    var countryCode: String?
+    var pads: [Pads]?
+}
+
+struct Pads: Decodable {
+    var id: Int
+    var mapURL: String?
+    var latitude: Float?
+    var longitude: Float?
+    var agencies: [Agencies]?
+}
+
+struct Agencies: Decodable {
+    var infoURLs: [String]?
 }
 
 struct Rocket: Decodable{
