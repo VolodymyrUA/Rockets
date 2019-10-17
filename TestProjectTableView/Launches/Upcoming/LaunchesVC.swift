@@ -65,7 +65,6 @@ extension LaunchesVC: UITableViewDelegate, UITableViewDataSource {
         //  delegate.didSelectedCell(data: launch?[indexPath.row])
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! LaunchTableViewCell
-        cell.layer.cornerRadius = 0
         cell.setData(data: launchData)
         return cell
     }

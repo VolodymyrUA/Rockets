@@ -81,7 +81,13 @@ class DetailsVC: UIViewController {
             
         case .stats:
             if let statusCell = tableView.dequeueReusableCell(withIdentifier: "Stats") as? StatsTableViewCell {
-                statusCell.configureWith(data: cellModel)
+                
+                if indexPath.row == 0 {
+                    statusCell.configureWith(data: cellModel)
+                }
+                if indexPath.row == 1 {
+                    statusCell.configureWithSecond(data: cellModel)
+                }
                 cell = statusCell
                 return cell
             }
@@ -98,8 +104,25 @@ extension DetailsVC: UITableViewDelegate, UITableViewDataSource {
         return Item.allCases.count
     }
     
+    
+    
+//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        return 30
+//    }
+    
+//    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+//        return 20
+//    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        
+        let item = Item.allCases[section]
+        
+        switch item {
+        case .stats:
+            return 2
+        default:
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

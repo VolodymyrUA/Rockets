@@ -31,7 +31,7 @@ class RocketTableViewCell: UITableViewCell {
         companyNameLbl.text = data.name
         rocketNameLbl.text = data.rocket?.name
         descritionLbl.text = "1data wich I dont have in reques 2data wich I dont have in requestdata wich I dont have in request3data wich I dont have in reques4tdata wich I dont have in request5data wich I dont have in reques6tdata wich I dont have in request7data wich I dont have in"
-      //  descritionLbl.lineBreakMode = .byWordWrapping
+      
         isActiveLbl.text = "Active"
     }
 }
